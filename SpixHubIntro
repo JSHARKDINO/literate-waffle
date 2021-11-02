@@ -36,14 +36,14 @@ TextLabel.TextWrapped = true
 
 Frame1.Name = "Frame1"
 Frame1.Parent = Frame
-Frame1.BackgroundColor3 = Color3.fromRGB(24, 124, 255)
+Frame1.BackgroundColor3 = Color3.fromRGB(55, 132, 255)
 Frame1.BorderColor3 = Color3.fromRGB(55, 132, 255)
 Frame1.Position = UDim2.new(0.0160000008, 0, 0.0960000008, 0)
 Frame1.Size = UDim2.new(0.484419256, 0, 0.0116279069, 0)
 Frame1.Visible = false
 
 Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(24, 124, 255)
+Frame_2.BackgroundColor3 = Color3.fromRGB(55, 132, 255)
 Frame_2.BorderColor3 = Color3.fromRGB(55, 132, 255)
 Frame_2.Position = UDim2.new(0.498440504, 0, 0.0960816443, 0)
 Frame_2.Size = UDim2.new(0.518413603, 0, 0.0116279069, 0)
