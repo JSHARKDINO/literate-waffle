@@ -51,11 +51,10 @@ Frame_2.Visible = false
 
 BlurEffect.Name = "Blur"
 BlurEffect.Parent = game.Lighting
-BlurEffect.Enabled = false
+BlurEffect.Enabled = true
 BlurEffect.Size = 26
 
-wait()
-BlurEffect.Enabled = true
+wait(1)
 ImageLabel:TweenPosition(UDim2.new(0.448, 0,0.359, 0),'Out','Quint',0.8,false)
 	
 wait(0.75)
