@@ -1,0 +1,37 @@
+local C4tch_me = Instance.new("ScreenGui")
+local Logo = Instance.new("ImageLabel")
+
+C4tch_me.Name = "C4tch_me"
+C4tch_me.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+C4tch_me.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Logo.Name = "Logo"
+Logo.Parent = C4tch_me
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.Position = UDim2.new(0.452014655, 0, 0.414094597, 0)
+Logo.Size = UDim2.new(0, 131, 0, 131)
+Logo.Image = "rbxassetid://12431239062"
+Logo.ImageTransparency = 1.000
+
+local function KOXKC_fake_script()
+	local script = Instance.new('LocalScript', C4tch_me)
+	
+	local a = script.Parent.Logo
+	
+	wait()
+	function fadeout(gui)
+		repeat gui.ImageTransparency = gui.ImageTransparency + 0.1 wait()
+		until gui.ImageTransparency == 1
+	end
+	function fadein(gui)
+		repeat gui.ImageTransparency = gui.ImageTransparency - 0.1 wait()
+		until gui.ImageTransparency == 0
+	end
+	
+	fadein(a)
+	wait(1.5)
+	fadeout(a)
+end
+coroutine.wrap(KOXKC_fake_script)()
+wait()
