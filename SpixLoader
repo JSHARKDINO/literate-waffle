@@ -1,0 +1,156 @@
+local SpixHub = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local TextButton = Instance.new("TextButton")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local close = Instance.new("ImageButton")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+
+SpixHub.Name = "SpixHub"
+SpixHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+SpixHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageLabel.Parent = SpixHub
+ImageLabel.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.319000006, 0, 1, 0)
+ImageLabel.Size = UDim2.new(0.361172169, 0, 0.436197907, 0)
+ImageLabel.Image = "rbxassetid://12434742428"
+
+TextLabel.Parent = ImageLabel
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0339819081, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.931034505, 0, 0.149253726, 0)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Hello,"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 30.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+UIAspectRatioConstraint.Parent = TextLabel
+UIAspectRatioConstraint.AspectRatio = 9.180
+UITextSizeConstraint.Parent = TextLabel
+UITextSizeConstraint.MaxTextSize = 30
+
+TextButton.Parent = ImageLabel
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.296146035, 0, 0.826865673, 0)
+TextButton.Size = UDim2.new(0.405679524, 0, 0.149253726, 0)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "Execute"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 31.000
+TextButton.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = TextButton
+UIAspectRatioConstraint_2.AspectRatio = 4.000
+
+UITextSizeConstraint_2.Parent = TextButton
+UITextSizeConstraint_2.MaxTextSize = 31
+
+TextLabel_2.Parent = ImageLabel
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0339819081, 0, 0.0865671635, 0)
+TextLabel_2.Size = UDim2.new(0.931034505, 0, 0.149253726, 0)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "Made by JsharkdinoBestKiller"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 18.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+UIAspectRatioConstraint_3.Parent = TextLabel_2
+UIAspectRatioConstraint_3.AspectRatio = 9.180
+
+UITextSizeConstraint_3.Parent = TextLabel_2
+UITextSizeConstraint_3.MaxTextSize = 18
+
+close.Name = "close"
+close.Parent = ImageLabel
+close.BackgroundTransparency = 1.000
+close.Position = UDim2.new(0.913793087, 0, 0.0373134315, 0)
+close.Size = UDim2.new(0.0507099405, 0, 0.074626863, 0)
+close.ZIndex = 2
+close.Image = "rbxassetid://3926305904"
+close.ImageRectOffset = Vector2.new(284, 4)
+close.ImageRectSize = Vector2.new(24, 24)
+
+UIAspectRatioConstraint_4.Parent = close
+UIAspectRatioConstraint_5.Parent = ImageLabel
+UIAspectRatioConstraint_5.AspectRatio = 1.472
+
+local function WWKNY_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local plr = game.Players.LocalPlayer
+	script.Parent.TextLabel.Text = "Hello, ".. plr.Name
+	
+	script.Parent.close.MouseButton1Click:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(WWKNY_fake_script)()
+local function UCKLZUX_fake_script() -- ImageLabel.Dragify 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(UCKLZUX_fake_script)()
+
+TextButton.MouseButton1Click:Connect(function()
+	
+end)
+
+wait()
+ImageLabel:TweenPosition(UDim2.new(0.319, 0,0.3, 0),"Out","Quint",0.8,false)
+wait()
